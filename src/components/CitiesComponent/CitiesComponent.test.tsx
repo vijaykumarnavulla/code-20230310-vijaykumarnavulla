@@ -7,7 +7,7 @@ describe('<CitiesComponent />', () => {
   test('it should mount', () => {
     render(<CitiesComponent />);
     
-    const citiesComponent = screen.getByTestId('CitiesComponent');
+    const citiesComponent = screen.getByTestId('Cities_component');
 
     expect(citiesComponent).toBeInTheDocument();
   });

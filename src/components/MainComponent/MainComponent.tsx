@@ -66,7 +66,7 @@ const MainComponent = () => {
   }
 
   return (<>
-    <div className='header_main_div' data-testid="Maincomponent">
+    <div className='header_main_div' data-testid="main_component">
 
       {/* menu items mobile view */}
       <div className='header_logo_mobile' ref={spanIconEle} onClick={onMobileIconBtnClick}></div>
