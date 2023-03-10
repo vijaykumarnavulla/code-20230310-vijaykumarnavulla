@@ -83,3 +83,10 @@
     color: #000000;
     padding-bottom: 5px;
 }
+
+/* media queries for mobile view */
+@media only screen and (max-width: 700px) {
+    .aboutus_item_main_div {
+        padding: 0px;
+    }
+}
