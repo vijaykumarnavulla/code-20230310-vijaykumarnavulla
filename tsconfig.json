@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "src/components/MainComponent/MainComponent.test.tsx/Maisrc/components/MainComponent/MainComponent.test.tsxomponents/MainComponent/MainComponent.test.tsx"  ]
 }
