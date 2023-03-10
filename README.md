@@ -25,6 +25,10 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 We will know the information how many lines we have coverage.
 it will tell the code coverage.
 
+### `npm run cypress`
+
+it will open basic cypress end 2 end testing.
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\

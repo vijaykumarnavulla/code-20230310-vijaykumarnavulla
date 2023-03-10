@@ -15,7 +15,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "tc": "jest --coverage"
+    "tc": "jest --coverage",
+    "cypress":"npx cypress open"
   },
   "eslintConfig": {
     "extends": [
