@@ -73,89 +73,92 @@ const MainComponent = () => {
   }
 
   return (<>
-    <div className='header_main_div' data-testid="mai n_component">
+  <header>
+  <div className='header_main_div' data-testid="mai n_component">
 
-      {/* menu items mobile view */}
-      <div className='header_logo_mobile' onClick={onMobileIconBtnClick}>
-        {isShowMobilMenu && (<div className='header_logo_mobile_click header_close_icon' >
-          X
-        </div>)}
-        {!isShowMobilMenu && (<div className='header_logo_mobile_click' ref={spanIconEle}>
-        </div>)}
-      </div>
+{/* menu items mobile view */}
+<div className='header_logo_mobile' onClick={onMobileIconBtnClick}>
+  {isShowMobilMenu && (<div className='header_logo_mobile_click header_close_icon' >
+    X
+  </div>)}
+  {!isShowMobilMenu && (<div className='header_logo_mobile_click' ref={spanIconEle}>
+  </div>)}
+</div>
 
-      {/* menu items */}
-      <div className='header_menu_div'
-        style={{ display: (dimensions.width < 700 && !isShowMobilMenu) ? 'none' : 'flex' }}>
-        <div className='header_main_logo'>
-          Your Logo
-        </div>
-        <div className='header_main_menus'>
-          <div className='header_menu_common'>
-            <Link className={`${pathname === '/explore' ? 'header_active header_w' : 'header_no_active header_w'}`}
-              to='/explore'>Explore</Link>
-          </div>
-          <div className='header_menu_common'>
-            <Link className={`${pathname === '/aboutus' ? 'header_active header_w' : 'header_no_active header_w'}`}
-              to='/aboutus'>About Us</Link>
-          </div>
-          <Link className={`${pathname === '/cities' ? 'header_active header_w' : 'header_no_active header_w'}`} to='/cities'>
-            <div className='header_menu_common' ref={divCitieIcon}>
-              Cities
-            </div>
-          </Link>
-          <div className='header_menu_call'>
-            <Link className={`${pathname === '/call' ? 'header_active header_w' : 'header_no_active header_w'}`}
-              to='/call'>Call</Link>
-          </div>
-
-        </div>
-      </div>
-
-
-      <div className='header_div_header_desc'>
-        {/* header content */}
-
-        <div className='header_main_content'>
-          Rethink your living <br /> & renting
-        </div>
-
-        {/* description content */}
-        <div className='header_main_desc'>
-          Make your stay painless with us
-        </div>
-      </div>
-      <div className='header_main_height'></div>
-      {/* seach contents */}
-      <div className='header_main_search_content'>
-        {/* select ur city */}
-        <div className='header_main_search_common'>
-          <span className='header_main_search_span_common'>City</span>
-          <input type={'text'} className='header_main_input_common'
-            style={{ width: inputsearchtw }} placeholder={'Select your city'}></input>
-        </div>
-        {/* select ur dates */}
-        <div className='header_main_search_common'>
-          <span className='header_main_search_span_common'>DATES</span>
-          <input type={'text'} className='header_main_input_common'
-            style={{ width: inputsearchtw }} placeholder={'Select your dates'}></input>
-        </div>
-        {/* guests */}
-        <div className='header_main_search_common'>
-          <span className='header_main_search_span_common'>GUESTS</span>
-          <input type={'text'} className='header_main_input_common'
-            style={{ width: inputsearchtw }} placeholder={'Add guests'}></input>
-        </div>
-        <div className='header_main_search_common header_main_serch_btn' ref={divSearchbtnEle}>Search</div>
-      </div>
-      <div className='header_main_bottom_div'>
-        <span ref={hederSpanBottmArrow}></span>
-      </div>
+{/* menu items */}
+<div className='header_menu_div'
+  style={{ display: (dimensions.width < 700 && !isShowMobilMenu) ? 'none' : 'flex' }}>
+  <div className='header_main_logo'>
+    Your Logo
+  </div>
+  <div className='header_main_menus'>
+    <div className='header_menu_common'>
+      <Link className={`${pathname === '/explore' ? 'header_active header_w' : 'header_no_active header_w'}`}
+        to='/explore'>Explore</Link>
     </div>
-    <Outlet></Outlet>
+    <div className='header_menu_common'>
+      <Link className={`${pathname === '/aboutus' ? 'header_active header_w' : 'header_no_active header_w'}`}
+        to='/aboutus'>About Us</Link>
+    </div>
+    <Link className={`${pathname === '/cities' ? 'header_active header_w' : 'header_no_active header_w'}`} to='/cities'>
+      <div className='header_menu_common' ref={divCitieIcon}>
+        Cities
+      </div>
+    </Link>
+    <div className='header_menu_call'>
+      <Link className={`${pathname === '/call' ? 'header_active header_w' : 'header_no_active header_w'}`}
+        to='/call'>Call</Link>
+    </div>
 
-    {/* footer implementaion */}
-    <div className='header_f_p'>
+  </div>
+</div>
+
+
+<div className='header_div_header_desc'>
+  {/* header content */}
+
+  <div className='header_main_content'>
+    Rethink your living <br /> & renting
+  </div>
+
+  {/* description content */}
+  <div className='header_main_desc'>
+    Make your stay painless with us
+  </div>
+</div>
+<div className='header_main_height'></div>
+{/* seach contents */}
+<div className='header_main_search_content'>
+  {/* select ur city */}
+  <div className='header_main_search_common'>
+    <span className='header_main_search_span_common'>City</span>
+    <input type={'text'} className='header_main_input_common'
+      style={{ width: inputsearchtw }} placeholder={'Select your city'}></input>
+  </div>
+  {/* select ur dates */}
+  <div className='header_main_search_common'>
+    <span className='header_main_search_span_common'>DATES</span>
+    <input type={'text'} className='header_main_input_common'
+      style={{ width: inputsearchtw }} placeholder={'Select your dates'}></input>
+  </div>
+  {/* guests */}
+  <div className='header_main_search_common'>
+    <span className='header_main_search_span_common'>GUESTS</span>
+    <input type={'text'} className='header_main_input_common'
+      style={{ width: inputsearchtw }} placeholder={'Add guests'}></input>
+  </div>
+  <div className='header_main_search_common header_main_serch_btn' ref={divSearchbtnEle}>Search</div>
+</div>
+<div className='header_main_bottom_div'>
+  <span ref={hederSpanBottmArrow}></span>
+</div>
+</div>
+  </header>
+   
+    <Outlet></Outlet>
+<footer>
+  {/* footer implementaion */}
+  <div className='header_f_p'>
       <div className='header_d_f'>
         <div className='hedeer_logo_cw_grp'>
           <div className='header_footer_logo'>
@@ -190,6 +193,8 @@ const MainComponent = () => {
         </div>
       </div>
     </div>
+</footer>
+  
   </>
 
 
