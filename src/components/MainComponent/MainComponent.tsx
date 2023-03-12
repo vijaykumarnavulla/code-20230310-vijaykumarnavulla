@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link, Navigate, Outlet, useLocation } from 'react-router-dom';
 import { downarrow, downarrowIcon, mobileMenu, serachIcon } from '../../constants/constant_iconst';
 import '../../assets/styles/mainComponent.css';
+import { flushSync } from 'react-dom';
 
 const MainComponent = () => {
 
@@ -62,14 +63,26 @@ const MainComponent = () => {
   }, []);
 
   const onMobileIconBtnClick = () => {
-    setIsShowMobilMenu(!isShowMobilMenu);
+    flushSync(() => {
+      setIsShowMobilMenu(!isShowMobilMenu);
+    });
+    if (isShowMobilMenu && spanIconEle && spanIconEle.current) {
+      spanIconEle.current.innerHTML = mobileMenu;
+    }
+
   }
 
   return (<>
-    <div className='header_main_div' data-testid="main_component">
+    <div className='header_main_div' data-testid="mai n_component">
 
       {/* menu items mobile view */}
-      <div className='header_logo_mobile' ref={spanIconEle} onClick={onMobileIconBtnClick}></div>
+      <div className='header_logo_mobile' onClick={onMobileIconBtnClick}>
+        {isShowMobilMenu && (<div className='header_logo_mobile_click header_close_icon' >
+          X
+        </div>)}
+        {!isShowMobilMenu && (<div className='header_logo_mobile_click' ref={spanIconEle}>
+        </div>)}
+      </div>
 
       {/* menu items */}
       <div className='header_menu_div'

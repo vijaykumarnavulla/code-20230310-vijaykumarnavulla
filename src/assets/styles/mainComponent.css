@@ -281,8 +281,9 @@
     .header_logo_mobile {
         display:flex;
         flex-direction: row-reverse;
+    }
+    .header_logo_mobile_click{
         cursor: pointer;
-
     }
 
     .header_menu_div {
@@ -322,4 +323,9 @@
     .header_f_menu_grp{
         margin: auto;
     }
+    .header_close_icon{
+        font-size: 28px;
+        color: white;
+    }
+
 }
